@@ -42,6 +42,7 @@ def transaction(request):
     form = TransactionForm(data=request.POST or None)
     if request.method == 'POST':
         if form.is_valid():
+            form.save()
             pk = request.POST['account']
             form.save()
             return balance(request, pk)

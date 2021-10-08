@@ -3,7 +3,7 @@
 	{% block content %}
 		<h3>ADD NEW TRANSACTION</h3>
 		<div class="new-transaction-form">
-			<form>
+			<form method="POST">
 				{% csrf_token %}
 				{{form.as_p}}
 				<button id="new-transaction-button" type="submit" name="Save_Transaction">Add Transaction</button>
